@@ -10,7 +10,7 @@ function clickFun(){
 	}
 	
 	var x = document.getElementById("demo");   // Get the element with id="demo"
-	x.text = "red";                     // Change the color of the element
+	x.innerText = x.innerHMTL = "red";                     // Change the color of the element
 	
 }
 
