@@ -28,8 +28,11 @@ function openAdvent() {
 
 function setCookie(cname,cvalue) {
 	var date = new Date();
-	var midnight = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
-	var expires = "expires="+midnight.toGMTString();
+	var time = date.getTime();
+	time += 3600 * 1000;
+	now.setTime(time);
+	//var midnight = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
+	var expires = "expires="+now.toUTCString();
     document.cookie = cname+"="+cvalue+"; "+expires;
 }
 
