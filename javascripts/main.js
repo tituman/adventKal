@@ -4,13 +4,14 @@ function clickFun(){
 	if (true || !checkCookie('username')) {
 		setCookie('username', 'bliblu');
 		//alert('cookie set!');
-		var x = document.getElementById("demo");   // Get the element with id="demo"
+		var x = document.getElementById("demo");   // Get the element with id="demo"x.outerHTML
 		var date = new Date();
 		date = date.getDate();
 		var messageForBlock = "today's date is " + date + ",  your randomly generated number is " + openAdvent(date);
-		x.innerText = x.innerHMTL = x.textContent = x.outerHTML = messageForBlock;
+		x.innerText = x.innerHMTL = x.textContent =  = messageForBlock;
 		if (won) {
 			messageForBlock += "\nWhich means you won!, the secret passcode is: " + hashCode('danielIgnacio');
+			x.innerText = x.innerHMTL = x.textContent  = messageForBlock;
 		}
 	}	
 	else {
