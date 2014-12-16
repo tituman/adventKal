@@ -8,7 +8,7 @@ function clickFun(){
 		var date = new Date();
 		date = date.getDate();
 		var messageForBlock = "today's date is " + date + ",  your randomly generated number is " + openAdvent(date);
-		x.innerText = x.innerHMTL = x.textContent =  = messageForBlock;
+		x.innerText = x.innerHMTL = x.textContent  = messageForBlock;
 		if (won) {
 			messageForBlock += "\nWhich means you won!, the secret passcode is: " + hashCode('danielIgnacio');
 			x.innerText = x.innerHMTL = x.textContent  = messageForBlock;
