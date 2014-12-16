@@ -1,4 +1,4 @@
-
+var won = false;
 function clickFun(){
 	
 	if (true || !checkCookie('username')) {
@@ -8,8 +8,10 @@ function clickFun(){
 		var date = new Date();
 		date = date.getDate();
 		var messageForBlock = "today's date is " + date + ",  your randomly generated number is " + openAdvent(date);
-		x.innerText = x.innerHMTL = x.textContent = x.outerHTML = messageForBlock;                     // Change the color of the element
-		;
+		x.innerText = x.innerHMTL = x.textContent = x.outerHTML = messageForBlock;
+		if (won) {
+			messageForBlock += "\nWhich means you won!, the secret passcode is: " + hashCode('danielIgnacio');
+		}
 	}	
 	else {
 		alert('you have tried already!');
@@ -18,12 +20,15 @@ function clickFun(){
 
 	
 }
-
+function hashCode(s){
+  return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
+}
 function openAdvent(date) {
 	var randNum = Math.floor((Math.random() * 25) + 1);
 	//alert(randNum);
 	//alert(date.getDate());
 	if (date == randNum) {
+		won = true;
 		alert('You got it!');
 	}
 	return randNum;
