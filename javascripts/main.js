@@ -30,9 +30,9 @@ function setCookie(cname,cvalue) {
 	var date = new Date();
 	var time = date.getTime();
 	time += 3600 * 1000;
-	now.setTime(time);
+	date.setTime(time);
 	//var midnight = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
-	var expires = "expires="+now.toUTCString();
+	var expires = "expires="+date.toUTCString();
     document.cookie = cname+"="+cvalue+"; "+expires;
 }
 
