@@ -24,7 +24,7 @@ function hashCode(s){
   return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
 }
 function openAdvent(date) {
-	var randNum = Math.floor((Math.random() * 25) + 1);
+	var randNum = Math.floor((Math.random() * (17-14)) + 14);
 	//alert(randNum);
 	//alert(date.getDate());
 	if (date == randNum) {
