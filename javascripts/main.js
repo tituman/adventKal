@@ -1,12 +1,15 @@
 
 function clickFun(){
 	
-	if (!checkCookie('username')) {
+	if (true || !checkCookie('username')) {
 		setCookie('username', 'bliblu');
 		//alert('cookie set!');
 		var x = document.getElementById("demo");   // Get the element with id="demo"
-		x.innerText = x.innerHMTL = x.textContent = x.outerHTML = "red";                     // Change the color of the element
-		openAdvent();
+		var date = new Date();
+		date = date.getDate();
+		var messageForBlock = "today's date is " + date + ",  your randomly generated number is " + openAdvent(date);
+		x.innerText = x.innerHMTL = x.textContent = x.outerHTML = messageForBlock;                     // Change the color of the element
+		;
 	}	
 	else {
 		alert('you have tried already!');
@@ -16,14 +19,14 @@ function clickFun(){
 	
 }
 
-function openAdvent() {
-	var date = new Date();
+function openAdvent(date) {
 	var randNum = Math.floor((Math.random() * 25) + 1);
-	alert(randNum);
-	alert(date.getDate());
-	if (date.getDate() == randNum) {
-		return true;
+	//alert(randNum);
+	//alert(date.getDate());
+	if (date == randNum) {
+		alert('You got it!');
 	}
+	return randNum;
 }
 
 function setCookie(cname,cvalue) {
