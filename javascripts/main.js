@@ -31,14 +31,15 @@ function getCookie(cname) {
     return "";
 }
 
-function checkCookie() {
-    var user=getCookie("username");
+function checkCookie(checkUser) {
+    var user=getCookie(checkUser);
     if (user != "") {
         return true;
     } else {
-       user = prompt("Please enter your name:","");
-       if (user != "" && user != null) {
+       //user = prompt("Please enter your name:","");
+       /*if (user != "" && user != null) {
            setCookie("username", user, 30);
-       }
+       }*/
+	   return false;
     }
 }
