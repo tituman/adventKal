@@ -21,7 +21,7 @@ function openAdvent() {
 	var randNum = Math.floor((Math.random() * 25) + 1);
 	alert(randNum);
 	alert(date.getDate());
-	if (date.getDate() == randNum)) {
+	if (date.getDate() == randNum) {
 		return true;
 	}
 }
