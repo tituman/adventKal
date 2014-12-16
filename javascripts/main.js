@@ -10,12 +10,12 @@ function clickFun(){
 		var messageForBlock = "today's date is " + date + ",  your randomly generated number is " + openAdvent(date);
 		x.innerText = x.innerHMTL = x.textContent  = messageForBlock;
 		if (won) {
-			messageForBlock += "\nWhich means you won!, the secret passcode is: " + hashCode('danielIgnacio');
+			messageForBlock += "\nWhich means you won!, the secret passcode is: " + btoa('danielIgnacio');
 			x.innerText = x.innerHMTL = x.textContent  = messageForBlock;
 		}
 	}	
 	else {
-		alert('you have tried already!');
+		alert('you have tried already!\nplease try in one hour');
 	}
 	
 
@@ -30,7 +30,7 @@ function openAdvent(date) {
 	//alert(date.getDate());
 	if (date == randNum) {
 		won = true;
-		alert('You got it!');
+		//alert('You got it!');
 	}
 	return randNum;
 }
