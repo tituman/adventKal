@@ -3,14 +3,15 @@ function clickFun(){
 	
 	if (!checkCookie('username')) {
 		setCookie('username', 'bliblu');
-		alert('cookie set!');
+		//alert('cookie set!');
+		var x = document.getElementById("demo");   // Get the element with id="demo"
+	x.innerText = x.innerHMTL = x.textContent = x.outerHTML = "red";                     // Change the color of the element
 	}	
 	else {
-		alert('cookie exists!');
+		alert('you have tried already!');
 	}
 	
-	var x = document.getElementById("demo");   // Get the element with id="demo"
-	x.innerText = x.innerHMTL = x.textContent = x.outerHTML = "red";                     // Change the color of the element
+
 	
 }
 
