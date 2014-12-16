@@ -1,1 +1,2 @@
-alert('This would be the main JS file.');
+
+function clickFun(){alert('This would be the main JS file.');};
