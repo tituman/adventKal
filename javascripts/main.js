@@ -5,7 +5,8 @@ function clickFun(){
 		setCookie('username', 'bliblu');
 		//alert('cookie set!');
 		var x = document.getElementById("demo");   // Get the element with id="demo"
-	x.innerText = x.innerHMTL = x.textContent = x.outerHTML = "red";                     // Change the color of the element
+		x.innerText = x.innerHMTL = x.textContent = x.outerHTML = "red";                     // Change the color of the element
+		openAdvent();
 	}	
 	else {
 		alert('you have tried already!');
@@ -13,6 +14,16 @@ function clickFun(){
 	
 
 	
+}
+
+function openAdvent() {
+	var date = new Date();
+	var randNum = Math.floor((Math.random() * 25) + 1);
+	alert(randNum);
+	alert(date.getDate());
+	if (date.getDate() == randNum)) {
+		return true;
+	}
 }
 
 function setCookie(cname,cvalue) {
