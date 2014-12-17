@@ -27,7 +27,7 @@ function hashCode(s){
 
 function clickDecode() {
 	var x = document.getElementById("decoderBox");
-	x.textContent = atob(x.textContent);
+	x.value = atob(x.value);
 }
 
 function openAdvent(date) {
