@@ -1,7 +1,7 @@
 var won = false;
 function clickFun(){
 	
-	if (true || !checkCookie('username')) {
+	if (!checkCookie('username')) {
 		setCookie('username', 'bliblu');
 		//alert('cookie set!');
 		var x = document.getElementById("demo");   // Get the element with id="demo"x.outerHTML
@@ -25,7 +25,7 @@ function hashCode(s){
   return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
 }
 function openAdvent(date) {
-	var randNum = Math.floor((Math.random() * (17-14)) + 14);
+	var randNum = Math.floor((Math.random() * (18-14)) + 14);
 	//alert(randNum);
 	//alert(date.getDate());
 	if (date == randNum) {
@@ -38,7 +38,7 @@ function openAdvent(date) {
 function setCookie(cname,cvalue) {
 	var date = new Date();
 	var time = date.getTime();
-	time += 3600 * 1000;
+	time += 1200 * 1000;
 	date.setTime(time);
 	//var midnight = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
 	var expires = "expires="+date.toUTCString();
