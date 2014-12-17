@@ -10,7 +10,7 @@ function clickFun(){
 		var messageForBlock = "today's date is " + date + ",  your randomly generated number is " + openAdvent(date);
 		x.innerText = x.innerHMTL = x.textContent  = messageForBlock;
 		if (won) {
-			messageForBlock += "\nWhich means you won!, the secret passcode is: " + btoa('http://www.indigo-herbs.co.uk/shop/buy/natural-aphrodisiacs-for-lovers-gift-set');
+			messageForBlock += "\nWhich means you won!, the secret passcode is: /n" + btoa('Lenii');
 			x.innerText = x.innerHMTL = x.textContent  = messageForBlock;
 		}
 	}	
@@ -27,11 +27,15 @@ function hashCode(s){
 
 function clickDecode() {
 	var x = document.getElementById("decoderBox");
+	if(x.value == "TGVuaWk=") {
+		var y = document.getElementById("linkIndigo");
+		y.hidden = false;
+	}
 	x.value = atob(x.value);
 }
 
 function openAdvent(date) {
-	var randNum = Math.floor((Math.random() * (18-17)) + 17);
+	var randNum = Math.floor((Math.random() * (18-15)) + 15);
 	//alert(randNum);
 	//alert(date.getDate());
 	if (date == randNum) {
