@@ -10,7 +10,7 @@ function clickFun(){
 		var messageForBlock = "today's date is " + date + ",  your randomly generated number is " + openAdvent(date);
 		x.innerText = x.innerHMTL = x.textContent  = messageForBlock;
 		if (won) {
-			messageForBlock += "\nWhich means you won!, the secret passcode is: /n" + btoa('Lenii');
+			messageForBlock += "\nWhich means you won!, the secret passcode is: \n" + btoa('Lenii');
 			x.innerText = x.innerHMTL = x.textContent  = messageForBlock;
 		}
 	}	
@@ -35,7 +35,7 @@ function clickDecode() {
 }
 
 function openAdvent(date) {
-	var randNum = Math.floor((Math.random() * (18-15)) + 15);
+	var randNum = Math.floor((Math.random() * (31)) );
 	//alert(randNum);
 	//alert(date.getDate());
 	if (date == randNum) {
@@ -48,7 +48,7 @@ function openAdvent(date) {
 function setCookie(cname,cvalue) {
 	var date = new Date();
 	var time = date.getTime();
-	time += 300 * 1000;
+	time += 3600 * 1000;
 	date.setTime(time);
 	//var midnight = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
 	var expires = "expires="+date.toUTCString();
