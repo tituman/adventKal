@@ -28,6 +28,7 @@ function hashCode(s){
 function clickDecode() {
 	var x = document.getElementById("decoderBox");
 	if(x.value == "TGVuaWk=") {
+		alert("Congratulations! please scroll further down for your next hint");
 		var y = document.getElementById("linkIndigo");
 		y.hidden = false;
 	}
