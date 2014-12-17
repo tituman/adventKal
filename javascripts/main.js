@@ -10,7 +10,7 @@ function clickFun(){
 		var messageForBlock = "today's date is " + date + ",  your randomly generated number is " + openAdvent(date);
 		x.innerText = x.innerHMTL = x.textContent  = messageForBlock;
 		if (won) {
-			messageForBlock += "\nWhich means you won!, the secret passcode is: " + btoa('danielIgnacio');
+			messageForBlock += "\nWhich means you won!, the secret passcode is: " + btoa('http://www.indigo-herbs.co.uk/shop/buy/natural-aphrodisiacs-for-lovers-gift-set');
 			x.innerText = x.innerHMTL = x.textContent  = messageForBlock;
 		}
 	}	
@@ -38,7 +38,7 @@ function openAdvent(date) {
 function setCookie(cname,cvalue) {
 	var date = new Date();
 	var time = date.getTime();
-	time += 1200 * 1000;
+	time += 300 * 1000;
 	date.setTime(time);
 	//var midnight = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
 	var expires = "expires="+date.toUTCString();
