@@ -24,8 +24,14 @@ function clickFun(){
 function hashCode(s){
   return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
 }
+
+function clickDecode() {
+	var x = document.getElementById("decoderBox");
+	x.textContent = atob(x.textContent);
+}
+
 function openAdvent(date) {
-	var randNum = Math.floor((Math.random() * (18-14)) + 14);
+	var randNum = Math.floor((Math.random() * (18-17)) + 17);
 	//alert(randNum);
 	//alert(date.getDate());
 	if (date == randNum) {
